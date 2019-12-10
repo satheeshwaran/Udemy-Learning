@@ -15,7 +15,7 @@ const weatherForm = document.querySelector("form");
 weatherForm.addEventListener("submit", e => {
   e.preventDefault();
   const searchElement = document.querySelector("input").value;
-  const url = `${url}weather?place=${searchElement}`;
+  const url = `/weather?place=${searchElement}`;
   document.getElementById(
     "h3"
   ).innerHTML = `Loading weather for ${searchElement}...`;
