@@ -1,9 +1,6 @@
 console.log("Client side hello");
 // const verseChoose = document.querySelector("select");
 // const poemDisplay = document.querySelector("pre");
-const production = "https://nodejs-udemy-course.herokuapp.com/";
-const development = "http://localhost:30001/";
-const url = process.env.NODE_ENV ? production : development;
 
 window.onload = () => {};
 
@@ -16,6 +13,7 @@ weatherForm.addEventListener("submit", e => {
   e.preventDefault();
   const searchElement = document.querySelector("input").value;
   const url = `/weather?place=${searchElement}`;
+  console.log("url", url);
   document.getElementById(
     "h3"
   ).innerHTML = `Loading weather for ${searchElement}...`;
