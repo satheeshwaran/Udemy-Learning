@@ -26,7 +26,7 @@ app.get("/help", (req, res) => {
   res.render("help", {
     title: "Don't come here if you need help!!",
     src: "img/me.jpg",
-    name: "Yuvan Sai"
+    name: "Satheeshwaran J"
   });
 });
 
@@ -34,7 +34,7 @@ app.get("/about", (req, res) => {
   res.render("about", {
     title: "About Weather app",
     src: "img/me.jpg",
-    name: "Yuvan Sai"
+    name: "Satheeshwaran J"
   });
 });
 
