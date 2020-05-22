@@ -1,7 +1,3 @@
-console.log("Client side hello");
-// const verseChoose = document.querySelector("select");
-// const poemDisplay = document.querySelector("pre");
-
 window.onload = () => {};
 
 getWeather = () => {
@@ -21,8 +17,6 @@ weatherForm.addEventListener("submit", e => {
   fetch(url)
     .then(response => {
       response.json().then(text => {
-        //   weather = JSON.parse(text);
-        console.log(text);
         document.getElementById("h3").innerHTML = text.error
           ? text.error
           : text.location;
@@ -30,7 +24,6 @@ weatherForm.addEventListener("submit", e => {
       });
     })
     .catch(err => {
-      console.log("Fetch problem: " + err.message);
       document.getElementById("h3").innerHTML = err.message;
     });
 });
